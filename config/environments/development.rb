@@ -75,7 +75,7 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
   
   # image_processingエラー回避
-  cofig.activate_job.queue_adapter = :inline
+  config.active_job.queue_adapter = :inline
 
   # 学習用ホスト共有設定
   config.hosts.clear
