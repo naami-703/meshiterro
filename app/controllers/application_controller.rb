@@ -2,15 +2,15 @@ class ApplicationController < ActionController::Base
   # devise利用の機能（ユーザー登録等）が使われる前にonfigure_permitted_parametersメソッドが実行
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-  # サインイン後にaboutページ遷移
+  # サインイン後にnewページ遷移に変更？
   def after_sign_in_path_for(resource)
     about_path
   end
 
- # サインアウト後aboutページ遷移
- def after_sign_out_path_for(resource)
-  about_path
-end
+ # サインアウト後aboutページ遷移？
+  def after_sign_out_path_for(resource)
+    about_path
+  end
 
   protected
   
