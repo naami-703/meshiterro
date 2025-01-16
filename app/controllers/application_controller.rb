@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  #　ログインしない状態でトップページにアクセスしたときトップページにリダイレクト
+  before_action :authenticate_user!, except: [:top]
   # devise利用の機能（ユーザー登録等）が使われる前にonfigure_permitted_parametersメソッドが実行
   before_action :configure_permitted_parameters, if: :devise_controller?
 
